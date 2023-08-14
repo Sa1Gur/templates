@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Guriy Samarin",
+    "classifications": [ "Common", "Asp.Net.Core" ],
+    "identity": "SaGur.SampleService",
+    "name": "SaGur Service",
+    "shortName": "SampleService",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    },
+    "symbols":{
+      "projectName": {
+        "type": "parameter",
+        "defaultValue": "service",
+        "fileRename": "service",
+        "replaces":"(ServiceName)"
+      },
+      "defaultNamespace": {
+        "type": "parameter",
+        "defaultValue": "DefaultNamespace",
+        "fileRename": "DefaultNamespace",
+        "replaces":"DefaultNamespace"
+      },
+      "data": {
+        "type": "parameter",
+        "datatype":"bool",
+        "defaultValue": "false",
+        "description": "Add EFCore projects"
+      },
+      "tests": {
+        "type": "parameter",
+        "datatype":"bool",
+        "defaultValue": "false",
+        "description": "Add UnitTest project"
+      },
+      "kafka": {
+        "type": "parameter",
+        "datatype":"bool",
+        "defaultValue": "false",
+        "description": "Add Kafka handler"
+      }
+    },
+    "sources": [
+      {
+          "modifiers": [
+              {
+                "condition": "(!data)",
+                "exclude": [
+                    "DefaultNamespace.Data/**", "DefaultNamespace.Migrations/**", "DefaultNamespace/Options/SomeDbOptions.cs"
+                ]
+              },
+              {
+                  "condition": "(!tests)",
+                  "exclude": [
+                      "DefaultNamespace.UnitTest/**"
+                  ]
+              },
+              {
+                  "condition": "(!kafka)",
+                  "exclude": [
+                    "DefaultNamespace/Options/KafkaOptions.cs", "DefaultNamespace/Handlers/SomeHandler.cs"
+                  ]
+              }
+          ]
+      }
+  ]
+}

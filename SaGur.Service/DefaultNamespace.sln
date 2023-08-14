@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultNamespace", "DefaultNamespace\DefaultNamespace.csproj", "{BC1141AF-7ACB-489C-A74A-9B4556B56572}"
+EndProject
+#if (data)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultNamespace.Migrations", "DefaultNamespace.Migrations\DefaultNamespace.Migrations.csproj", "{BC1141AF-7ACB-489C-A74A-9B4556B56572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultNamespace.Data", "DefaultNamespace.Data\DefaultNamespace.Data.csproj", "{BC1141AF-7ACB-489C-A74A-9B4556B56572}"
+EndProject
+#endif
+#if (tests)
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultNamespace.UnitTest", "DefaultNamespace.UnitTest\DefaultNamespace.UnitTest.csproj", "{BC1141AF-7ACB-489C-A74A-9B4556B56572}"
+EndProject
+#endif
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1141AF-7ACB-489C-A74A-9B4556B56572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1141AF-7ACB-489C-A74A-9B4556B56572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1141AF-7ACB-489C-A74A-9B4556B56572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1141AF-7ACB-489C-A74A-9B4556B56572}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

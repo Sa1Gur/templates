@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SaGur.Templates</id>
+    <version>2.0.0</version>
+    <title>SaGur templates</title>
+    <authors>Guriy Samarin</authors>
+    <description>Templates to use when creating an application with all the things you need.</description>
+    <tags>dotnet-new templates sagur testme</tags>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>
